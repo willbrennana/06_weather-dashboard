@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>Willy B's Weather Dashboard</title>
+</head>
+
+<body class="bckgrnd">
+    <header class="text-center text-5xl p-4 font-bold">
+        <h1>The Storm Watchers Dashboard</h1>
+    </header>
+    <div class="inline-block flex-row" id="history-search">
+        <h1 class="pl-3 font-bold">Start Your Quest 🤠</h1>
+        <!-- Search Field -->
+        <input type="text" placeholder="Enter city name" class="m-3 border-black-600 border-2 p-0.5" id="input-search">
+        <!-- Search Button -->
+        <button class="border-black-600 border-2 p-1.5 rounded-lg" id="btn-search">Search</button>
+        <!-- Last 10 Searches -->
+        <h1 class="pl-3 font-bold" id="log-search">Past Searches</h1>
+    </div>
+    <!-- Current City -->
+    <section class="inline-block flex-row">
+        <div id="div-current" class="flex items-left justify-left text-left p-4 font-bold">Today's Weather</div>
+        <h1 id="h1-forecast" class="flex items-left justify-left text-left p-4 font-bold">5Day
+            4Cast
+        </h1>
+        <div id="div-city" class="flex flex-row m-2 p-3"></div>
+    </section>
+</body>
+<script src="./assets/script.js"></script>
+
+</html>
