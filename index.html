@@ -6,31 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script rel="stylesheet" href="./assets/css/main.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
     <title>Willy B's Weather Dashboard</title>
 </head>
 
-<body class="bckgrnd">
+<body class="bg-green-400">
     <header class="text-center text-5xl p-4 font-bold">
-        <h1>The Storm Watchers Dashboard</h1>
+        <h1>Willy B's Weather Dashboard</h1>
     </header>
-    <div class="inline-block flex-row" id="history-search">
-        <h1 class="pl-3 font-bold">Start Your Quest 🤠</h1>
-        <!-- Search Field -->
-        <input type="text" placeholder="Enter city name" class="m-3 border-black-600 border-2 p-0.5" id="input-search">
-        <!-- Search Button -->
-        <button class="border-black-600 border-2 p-1.5 rounded-lg" id="btn-search">Search</button>
-        <!-- Last 10 Searches -->
-        <h1 class="pl-3 font-bold" id="log-search">Past Searches</h1>
-    </div>
-    <!-- Current City -->
-    <section class="inline-block flex-row">
-        <div id="div-current" class="flex items-left justify-left text-left p-4 font-bold">Today's Weather</div>
-        <h1 id="h1-forecast" class="flex items-left justify-left text-left p-4 font-bold">5Day
-            4Cast
-        </h1>
-        <div id="div-city" class="flex flex-row m-2 p-3"></div>
-    </section>
+
+    <main class="grid grid-cols-12 gap-4 p-2">
+        <!-- City Search -->
+        <div class="border-2 rounded border-gray-900 flex flex-col col-span-3 p-2">
+            <h2 class="text-lg font-bold">Pick a City.</h2>
+            <form id="form-search">
+                <input id="input-search" type="text" class="border w-full">
+                <button id="btn-search"
+                    class="bg-indigo-500 hover:bg-indigo-500 text-white mt-1 p-1 w-full">Search</button>
+            </form>
+            <br>
+            <!-- Last 10 Searches -->
+            <div id="history-search" class="flex flex-col">
+                <h3 class="text-lg font-bold">Past Picks:</h3>
+            </div>
+        </div>
+        <div class="col-span-6 p-2">
+            <!-- Current Weather -->
+            <div id="div-current" class="border-2 rounded border-gray-900 p-2 w-full">
+                <h2 id="city-current" class="text-xl font-bold pb-3">Any City.</h2>
+                <p id="temp-current" class="pb-3">🌡:</p>
+                <p id="wind-current" class="pb-3">💨:</p>
+                <p id="humi-current" class="pb-3">😅:</p>
+            </div>
+
+            <!-- 5-Day Forecast -->
+            <div class="border-2 rounded border-gray-900 mt-2 p-2 w-full">
+                <h2 class="text-lg font-bold">5Day 4Cast:</h2>
+                <div id="div-forecast" class="pt-2 grid grid-cols-5 gap-3 p-2">
+                    <!-- Temp -->
+                    <!-- Wind -->
+                    <!-- Humi -->
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 <script src="./assets/script.js"></script>
 
