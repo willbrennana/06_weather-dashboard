@@ -1,6 +1,6 @@
 # Willy B's Weather Dashboard
 
-This was my first challenging using Server-Side APIs.
+This was my first challenge using Server-Side APIs.
 
 With one link to account for two distinct URLs (the primary difference being "weather" vs. "forecast" before ${cityLogged}), I came to the realization that creating one searchCity function, as opposed to two, would help me reflect the fact that both URLs are helping retrieve data from the same city.
 
@@ -20,4 +20,4 @@ Below is a screenshot of my latest and greatest:
 
 ![](./assets/images/SiteScreenshot.png)
 
-To test your JavaScript knowledge, visit https://willbrennana.github.io/06_weather-dashboard/
+Next time you're wondering what to pack for your next trip, visit https://willbrennana.github.io/06_weather-dashboard/
