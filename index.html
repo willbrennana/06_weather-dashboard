@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script rel="stylesheet" href="./assets/css/main.css"></script>
+    <script rel="stylesheet" href="./assets/css/_normalize.css"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
         integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
     <title>Willy B's Weather Dashboard</title>
@@ -22,9 +22,9 @@
         <div class="border-2 rounded border-gray-900 flex flex-col col-span-3 p-2">
             <h2 class="text-lg font-bold">Pick a City.</h2>
             <form id="form-search">
-                <input id="input-search" type="text" class="border w-full">
+                <input id="input-search" type="text" class="border rounded w-full">
                 <button id="btn-search"
-                    class="bg-indigo-500 hover:bg-indigo-500 text-white mt-1 p-1 w-full">Search</button>
+                    class="bg-indigo-500 hover:bg-indigo-500 rounded text-white mt-1 p-1 w-full">Search</button>
             </form>
             <br>
             <!-- Last 10 Searches -->
@@ -40,7 +40,6 @@
                 <p id="wind-current" class="pb-3">💨:</p>
                 <p id="humi-current" class="pb-3">😅:</p>
             </div>
-
             <!-- 5-Day Forecast -->
             <div class="border-2 rounded border-gray-900 mt-2 p-2 w-full">
                 <h2 class="text-lg font-bold">5Day 4Cast:</h2>
