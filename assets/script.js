@@ -53,19 +53,15 @@ function searchCity(event) {
   }
   localStorage.setItem("cities", JSON.stringify(arrayCities.slice(-10)));
   init();
-  console.log(arrayCities);
-  console.log(cityLogged);
   // Begin to retrieve from API
   fetch(currentWeatherUrl)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
       let currentWeatherIcons = data.weather[0].icon;
       // Apply API to search for five-day forecast data
       let fiveDayUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityLogged}&appid=1216c6d8b1f2b30f4fcbb22eb9353470&units=imperial`;
-      console.log(currentWeatherIcons);
       cityCurrent.innerHTML = `${data.name} ${today.format(
         "M/DD/YYYY"
       )} <img src="http://openweathermap.org/img/wn/${currentWeatherIcons}@2x.png">`;
@@ -78,7 +74,6 @@ function searchCity(event) {
           return response.json();
         })
         .then(function (data) {
-          console.log(data);
           // For loop to generate five-day forecast
           for (let i = 1; i < 6; i++) {
             let fiveDayIcons = data.list[i].weather[0].icon;
